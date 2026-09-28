@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/DFRM" >
+        <file>icon2.png</file>
+    </qresource>
+</RCC>

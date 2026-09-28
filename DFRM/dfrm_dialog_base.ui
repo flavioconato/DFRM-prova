@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DFRMDialogBase</class>
+ <widget class="QDialog" name="DFRMDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>730</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>720</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>720</width>
+    <height>730</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>DFRM - Autorità di bacino Distrettuale delle Alpi Orientali</string>
+  </property>
+  <widget class="QGroupBox" name="groupBoxInputfile">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>701</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Input files</string>
+   </property>
+   <widget class="QLabel" name="labelUsosuolo">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>140</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Raster uso suolo</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelIdro">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Idrogramma</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelChezy">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>230</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Coefficiente di conduttanza</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDEM">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DEM</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButtonDEM">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>20</y>
+      <width>27</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButtonIdro">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>80</y>
+      <width>27</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButtonDistr">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Parametri Distribuiti</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButtonConc">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Parametri concentrati</string>
+    </property>
+    <property name="autoExclusive">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelUsosuoloTxt">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>170</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Caratteristiche uso suolo</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButtonUsosuolo">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>140</y>
+      <width>27</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButtonUsosuoloTxt">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>170</y>
+      <width>27</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditChezy">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>230</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditUsosuolo">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>170</y>
+      <width>421</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditIdro">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>80</y>
+      <width>481</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBoxInternalSect">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sezioni interne</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSezioniInterne">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>290</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sezioni interne</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButtonSezioniInterne">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>290</y>
+      <width>27</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTimestepInterno">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>320</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Time step interno di output (s)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditTimestepInterno">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>320</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSezioniIO">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sezioni di Ingresso/Uscita</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButtonSezioniIO">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>50</y>
+      <width>27</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineHdr">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>20</y>
+      <width>481</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditUsosuoloRaster">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>140</y>
+      <width>421</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditSezioniInterne">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>290</y>
+      <width>421</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditSezioniIO">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>50</y>
+      <width>481</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxParametri">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>356</y>
+     <width>701</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Dati - Parametri</string>
+   </property>
+   <widget class="QLineEdit" name="lineEditRoutMinDep">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>20</y>
+      <width>81</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRoutMinDepth">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>20</y>
+      <width>301</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Profondità minima necessaria alla propagazione (m)</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButtonFondoMobile">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>50</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fondo mobile</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButtonFondoFisso">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fondo fisso</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxFondoMobile">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>681</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Dati - Parametri fondo mobile</string>
+    </property>
+    <widget class="QLineEdit" name="lineEditKD">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>90</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditCMedia">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>60</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelKE">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>51</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>KE</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditKE">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>90</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelCMedia">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>171</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Concentrazione solida media</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditCRest">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>60</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelCRest">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>60</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Concentrazione solida di riposo</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelKD">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>90</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>KD</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditEDMinDepth">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>30</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelEDMinDepth">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>281</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Profondità minima per erosione/deposito (m)</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditCoeffAngMinDep">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>120</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditAngMinDep">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>120</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelCoeffAngMinDep">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>120</y>
+       <width>261</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Coeff. velocità per deposito agevolato</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelAngMinDep">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>231</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Angolo limite per deposito agevolato (°)</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBoxParamConc">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>149</y>
+       <width>661</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Dati - Parametri concentrati</string>
+     </property>
+     <widget class="QLineEdit" name="lineEditVLimEros">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>50</y>
+        <width>71</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelAngLimDep">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>20</y>
+        <width>181</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Angolo limite di deposito (°)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelVLimEros">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>191</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Velocità limite di erosione (m/s)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditAngLimDep">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>20</y>
+        <width>71</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditVLimDep">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>50</y>
+        <width>71</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditAngLimEros">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>20</y>
+        <width>71</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelVLimDep">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>50</y>
+        <width>221</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Velocità limite di deposito (m/s)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelAngLimEros">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>171</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Angolo limite di erosione (°)</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="lineEditDurataSim">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>81</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDurataSim">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>131</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Durata simulazione (s)</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButtonLoad">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>695</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Carica</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonSave">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>695</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Salva</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonExe">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>695</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Esegui</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonCancel">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>695</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Annulla</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxFileERR">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>700</y>
+     <width>201</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Creazione del file errori</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineHdr</tabstop>
+  <tabstop>toolButtonDEM</tabstop>
+  <tabstop>lineEditSezioniIO</tabstop>
+  <tabstop>toolButtonSezioniIO</tabstop>
+  <tabstop>lineEditIdro</tabstop>
+  <tabstop>toolButtonIdro</tabstop>
+  <tabstop>radioButtonDistr</tabstop>
+  <tabstop>lineEditUsosuoloRaster</tabstop>
+  <tabstop>toolButtonUsosuolo</tabstop>
+  <tabstop>lineEditUsosuolo</tabstop>
+  <tabstop>toolButtonUsosuoloTxt</tabstop>
+  <tabstop>radioButtonConc</tabstop>
+  <tabstop>lineEditChezy</tabstop>
+  <tabstop>checkBoxInternalSect</tabstop>
+  <tabstop>lineEditSezioniInterne</tabstop>
+  <tabstop>toolButtonSezioniInterne</tabstop>
+  <tabstop>lineEditTimestepInterno</tabstop>
+  <tabstop>lineEditDurataSim</tabstop>
+  <tabstop>lineEditRoutMinDep</tabstop>
+  <tabstop>radioButtonFondoFisso</tabstop>
+  <tabstop>radioButtonFondoMobile</tabstop>
+  <tabstop>lineEditEDMinDepth</tabstop>
+  <tabstop>lineEditCMedia</tabstop>
+  <tabstop>lineEditCRest</tabstop>
+  <tabstop>lineEditKE</tabstop>
+  <tabstop>lineEditKD</tabstop>
+  <tabstop>lineEditAngMinDep</tabstop>
+  <tabstop>lineEditCoeffAngMinDep</tabstop>
+  <tabstop>lineEditAngLimEros</tabstop>
+  <tabstop>lineEditAngLimDep</tabstop>
+  <tabstop>lineEditVLimEros</tabstop>
+  <tabstop>lineEditVLimDep</tabstop>
+  <tabstop>pushButtonLoad</tabstop>
+  <tabstop>pushButtonSave</tabstop>
+  <tabstop>pushButtonExe</tabstop>
+  <tabstop>pushButtonCancel</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
